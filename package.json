@@ -10,5 +10,9 @@
   "license": "ISC",
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "dependencies": {
+    "pell": "^1.0.6",
+    "suneditor": "^2.44.12"
   }
 }
