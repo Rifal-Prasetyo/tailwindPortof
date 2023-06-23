@@ -1,5 +1,5 @@
 <?php 
-$conn = mysqli_connect("localhost", "root", "", "mencoba");
+require 'connect.php';
 
 
 	function query($query) {
@@ -48,6 +48,7 @@ $conn = mysqli_connect("localhost", "root", "", "mencoba");
 		global $conn;
 	$judul = htmlspecialchars($data["judul"]);
 	$konten = htmlspecialchars($data["content"]);
+	$isi = $data['isi'];
 	$kategori = htmlspecialchars($data["category"]);
 	$waktu = date('d-m-Y h:i:s');
 	$alias = md5($judul);
@@ -62,7 +63,7 @@ $conn = mysqli_connect("localhost", "root", "", "mencoba");
 
 	$query = "INSERT INTO portofolio_blog 
 	VALUES 
-	(NULL, '$judul', '$konten', '$kategori', '$gambar', '$waktu', '$alias')";
+	(NULL, '$judul', '$konten', '$isi', '$kategori', '$gambar', '$waktu', '$alias')";
 	mysqli_query($conn, $query);
 
 	return mysqli_affected_rows($conn);

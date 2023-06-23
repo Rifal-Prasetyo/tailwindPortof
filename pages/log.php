@@ -23,13 +23,12 @@ if (isset($_POST["login"])) {
 			
 			// set session
 			$_SESSION["login"] = true;
-            $_SESSION['masuk'] = true;
-			header("location: admin_panel.php");
+            $_SESSION["masuk"] = true;
+			header("Location: admin_panel.php");
 			exit;
 		}
 	} 
 
-	$error = true;
 
 }
 

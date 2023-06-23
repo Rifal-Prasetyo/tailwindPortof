@@ -34,6 +34,8 @@ if(isset($_POST["submit"])) {
                     <input type="text" name="judul" id="judul" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
                     <label for="content" class="text-base font-bold text-white">Konten</label>
                     <input type="text" name="content" id="content" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">
+                    <label for="isi" class="text-base font-bold text-white">Isi</label>
+                    <textarea name="isi" id="isi" class="w-full bg-slate-200 text-dark p-3 rounded-md focus:outline-none focus:ring-primary focus:ring-1 focus:border-primary">masukkan isi di sini support html tag...</textarea>
                     <h4 class="text-base font-bold text-white mt-2">Kategori</h4>
                     <select name="category" id="category" class="bg-slate-300 mb-2 py-2 px-3 rounded-full">
                         <option value="progammer">Progammer</option>

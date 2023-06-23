@@ -1,8 +1,9 @@
+
 <?php 
+
 require 'dist/controller/function.php';
 $hasil = query('SELECT * FROM portofolio_project ORDER BY id DESC');
 $hasil_dua = query('SELECT * FROM portofolio_blog ORDER BY id DESC');
-$event = query("SELECT * FROM portofolio_event");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,10 +11,11 @@ $event = query("SELECT * FROM portofolio_event");
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="eSR7FUifzWKzRxHD1jky9AmlXbU4DUAv9mj02MuDWMg" />
     <meta property="og:title" content="Rifal Portofolio | Website First " />
     <meta property="og:description" content="Portofolio website pertamaku" />
     <meta property="og:image" content="https://rifalkom.my.id/thumbnail.jpg"/>   
-    <title>Portofolio Tailwind</title>
+    <title>Portofolio M Rifal Prasetyo</title>
     <link rel="stylesheet" href="dist/output.css">
     <script src="https://unpkg.com/feather-icons"></script>
     <style>
@@ -105,7 +107,7 @@ $event = query("SELECT * FROM portofolio_event");
                         <img src="dist/rifal.webp" alt="aku" srcset="" class="max-w-full mx-auto ">
                         <span class="absolute bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-125">
                             <svg viewBox="0 0 200 200" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
-                                <path fill="#03C988" d="M63.7,-52.1C80.4,-47.1,90.2,-23.5,83.6,-6.5C77.1,10.4,54.2,20.9,37.5,33.8C20.9,46.8,10.4,62.2,0.4,61.8C-9.6,61.5,-19.3,45.2,-28.5,32.2C-37.6,19.3,-46.3,9.6,-47.8,-1.5C-49.3,-12.6,-43.6,-25.3,-34.4,-30.3C-25.3,-35.3,-12.6,-32.7,5.4,-38.1C23.5,-43.5,47.1,-57.1,63.7,-52.1Z" transform="translate(100 100) scale(1,1)" />
+                                <path fill="#14b8a6" d="M63.7,-52.1C80.4,-47.1,90.2,-23.5,83.6,-6.5C77.1,10.4,54.2,20.9,37.5,33.8C20.9,46.8,10.4,62.2,0.4,61.8C-9.6,61.5,-19.3,45.2,-28.5,32.2C-37.6,19.3,-46.3,9.6,-47.8,-1.5C-49.3,-12.6,-43.6,-25.3,-34.4,-30.3C-25.3,-35.3,-12.6,-32.7,5.4,-38.1C23.5,-43.5,47.1,-57.1,63.7,-52.1Z" transform="translate(100 100) scale(1,1)" />
                             </svg>
                         </span>
                     </div>
@@ -115,16 +117,11 @@ $event = query("SELECT * FROM portofolio_event");
         </div>
     </section>
     <!-- hero section end -->
-    <!-- event section start  -->
-    <?php foreach ($event as $row_tiga) { ?>
-        <?php if($row_tiga['kondisi'] == "Ya") { ?> 
-            <div class="w-full py-3 px-4 bg-orange-300">
-                <p class="font-normal text-base text-white first-letter:text-primary w-full text-center items-center"><?php echo $row_tiga['isi']; ?></p>
-        <?php } ?>
-    </div>
-    <?php } ?>
-    <!-- event section stop  -->
-
+    <!-- event ssection start  -->
+    <section class=" pt-3">
+        <div class="container mx-auto  bg-orange-300 ">mencoba  </div>
+    </section>
+    <!-- event ssection end  -->
    
    
     <!-- About section start -->
@@ -234,9 +231,9 @@ $event = query("SELECT * FROM portofolio_event");
                         <div class="py-8 px-6">
                             <h3 class="block mb-3 font-semibold text-xl text-primary hover:text-blue-400 truncate"><?= $row_dua['judul'] ;?></h3>
                             <?php if($row_dua['kategori'] == 'progammer') { ?>  
-                            <h1 class="py-1 px-4 bg-red-500 shadow-md rounded-md mb-4" ><?= $row_dua['kategori'] ?></h1>
+                            <h1 class="py-1 px-4 bg-red-500 shadow-md rounded-md font-mono opacity-50 mb-4 w-1/4 text-xs" ><?= $row_dua['kategori'] ?></h1>
                             <?php } else { ?> 
-                                <h1 class="py-1 px-4 bg-blue-400 shadow-md rounded-md  mb-4" ><?= $row_dua['kategori'] ?></h1>
+                                <h1 class="py-1 px-4 bg-blue-400 shadow-md rounded-md font-mono opacity-50 mb-4 w-1/4 text-xs" ><?= $row_dua['kategori'] ?></h1>
                             <?php } ?>
                             <p id="paragrafFFF" class="font-medium text-secondary text-base mb-6 mt-3 text-ellipsis overflow-hidden"><?= $row_dua['konten'] ;?></p>
                             <a href="pages/blog.php?lihat=<?= $row_dua['id'];?>&saya=<?= $row_dua['judul'] ;?>" target="_blank" class="font-medium bg-primary py-2 px-4 text-white rounded-lg hover:opacity-80">Baca Selengkapnya</a>

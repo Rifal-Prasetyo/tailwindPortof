@@ -68,6 +68,7 @@ $hasil_blog = query('SELECT * FROM portofolio_blog ORDER BY id DESC LIMIT 7');
                         <th class="border border-slate-500">No.</th>
                         <th class="border border-slate-500">judul</th>
                         <th class="border border-slate-500">konten</th>
+                        <th class="border border-slate-500">isi</th>
                         <th class="border border-slate-500">Kategori</th>
                         <th class="border border-slate-500">gambar</th>
                         <th class="border border-slate-500">Tanggal</th>
@@ -79,6 +80,7 @@ $hasil_blog = query('SELECT * FROM portofolio_blog ORDER BY id DESC LIMIT 7');
                         <td class="border border-slate-700"><?php echo $ii ?></td>
                         <td class="border border-slate-700"><?php echo $row_blog['judul']; ?></td>
                         <td class="border border-slate-700" width="30px"><?php echo $row_blog['konten'] ; ?></td>
+                        <td class="border border-slate-700" width="30px"><?php echo $row_blog['isi'] ; ?></td>
                         <td class="border border-slate-700"><?php echo $row_blog['kategori']; ?></td>
                         <td class="border border-slate-700"><img src="img/<?php echo $row_blog['gambar'] ?>" alt="" srcset="" width="50"></td>
                         <td class="border border-slate-700"><?php echo $row_blog['gambar']?></td>
@@ -99,13 +101,11 @@ $hasil_blog = query('SELECT * FROM portofolio_blog ORDER BY id DESC LIMIT 7');
         <div class="w-full p-3 rounded-lg bg-slate-100">
             <h3 class="font-bold text-primary">Event</h3>
             <h2 class="font-light text-blue-300">Event akan ditampikan dibawah hero section</h2>
-            <form action="../dist/handler/event.php" method="post">
-                <input type="radio" name="show" id="show" value="Ya"> Ya
-                <input type="radio" name="show" id="show" value="Tidak"> Tidak
-                <br>
-                <label for="note"><input type="text" name="event" id="event" class="px-6 w-full border border-blue-500 bg-white rounded-full"></label>
-                <button type="submit" class="py-1 px-3 bg-blue-400 text-kecil_px hover:shadow-lg hover:border hover:border-red-500 rounded-lg mb-6">Pasang</button>
-            </form>
+            <input type="radio" name="show" id="show" value="Ya"> Ya
+            <input type="radio" name="show" id="show" value="Tidak"> Tidak
+            <br>
+            <label for="note"><input type="text" name="event" id="event" class="px-6 w-full border border-blue-500 bg-white rounded-full"></label>
+            <button class="py-1 px-3 bg-blue-400 text-kecil_px hover:shadow-lg hover:border hover:border-red-500 rounded-lg mb-6">Pasang</button>
         </div>
     </div>
     <div class="container pb-10">

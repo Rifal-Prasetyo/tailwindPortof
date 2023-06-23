@@ -67,7 +67,7 @@ $hasil = query("SELECT * FROM portofolio_blog WHERE id LIKE '$id' AND judul LIKE
                 <h3 class="font-bold text-sky-700 text-3xl text-center"><?= $row['judul'] ?></h3>
             </div>
             <div class="p-6">
-                <p class="text-base text-slate-500 font-normal"><?= $row['konten'] ?></p>
+                <p class="text-base text-slate-500 font-normal"><?= $row['isi'] ?></p>
             </div>
             <div class="w-full flex items-end justify-end">
                 <!-- <button class="py-2 px-5 mr-6 bg-primary border  border-red-400 ml-5 rounded-full text-white text-base font-sans" onclick="close()">kembali
